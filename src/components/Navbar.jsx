@@ -46,7 +46,7 @@ export default function Navbar()
                             <Link
                                 key={link.name}
                                 to={link.href}
-                                className="text-muted hover:text-white transition-colors duration-300 text-sm font-medium"
+                                className="text-white hover:text-primary transition-colors duration-300 text-sm font-medium"
                             >
                                 {link.name}
                             </Link>
@@ -87,7 +87,7 @@ export default function Navbar()
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="md:hidden pb-4 border-t border-orange-500 border-opacity-50 bg-gradient-to-b from-white from-opacity-5 to-transparent"
+                        className="md:hidden pb-4 border-t border-white/10"
                     >
                         <div className="space-y-2">
                             {navLinks.map((link) => (
@@ -95,7 +95,7 @@ export default function Navbar()
                                     key={link.name}
                                     to={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="block px-4 py-2 rounded-lg text-muted hover:text-white hover:bg-orange-500 hover:bg-opacity-20 transition-all duration-300"
+                                    className="block px-4 py-2 rounded-lg text-white hover:text-primary hover:bg-orange-500 hover:bg-opacity-20 transition-all duration-300"
                                 >
                                     {link.name}
                                 </Link>
