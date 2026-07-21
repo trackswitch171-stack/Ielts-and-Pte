@@ -71,7 +71,10 @@ export default function Navbar()
                     <div className="md:hidden">
                         <button
                             onClick={toggleMenu}
-                            className="p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
+                            className={`p-2 rounded-lg transition-all duration-300 ${isOpen
+                                    ? 'bg-orange-500 text-white'
+                                    : 'text-white hover:bg-white/10'
+                                }`}
                         >
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
                         </button>
@@ -84,7 +87,7 @@ export default function Navbar()
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="md:hidden pb-4 border-t border-white/10"
+                        className="md:hidden pb-4 border-t border-orange-500 border-opacity-50 bg-gradient-to-b from-white from-opacity-5 to-transparent"
                     >
                         <div className="space-y-2">
                             {navLinks.map((link) => (
@@ -92,7 +95,7 @@ export default function Navbar()
                                     key={link.name}
                                     to={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="block px-4 py-2 rounded-lg text-muted hover:text-white hover:bg-white/10 transition-colors"
+                                    className="block px-4 py-2 rounded-lg text-muted hover:text-white hover:bg-orange-500 hover:bg-opacity-20 transition-all duration-300"
                                 >
                                     {link.name}
                                 </Link>
@@ -103,7 +106,7 @@ export default function Navbar()
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => setIsOpen(false)}
-                                className="flex items-center justify-center gap-2 w-full mt-4 px-4 py-2 bg-primary hover:bg-orange-600 text-white rounded-lg font-semibold transition-all"
+                                className="flex items-center justify-center gap-2 w-full mt-4 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-semibold transition-all duration-300"
                             >
                                 <MessageCircle size={18} />
                                 WhatsApp Now

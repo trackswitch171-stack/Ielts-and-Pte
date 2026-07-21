@@ -26,11 +26,6 @@ export default function ServicePage({
             title: 'Fast assistance',
             text: 'Get quick help for urgent applications, requests, and document needs.',
         },
-        {
-            icon: FiBookOpen,
-            title: 'SEO-optimised guidance',
-            text: 'Useful resources for students looking for trusted exam support online.',
-        },
     ];
 
     return (
@@ -77,7 +72,7 @@ export default function ServicePage({
                         </div>
                     </motion.section>
 
-                    <section className="mt-10 grid md:grid-cols-3 gap-6">
+                    <section className="mt-10 grid md:grid-cols-2 gap-6">
                         {featureCards.map((card, index) =>
                         {
                             const Icon = card.icon;

@@ -91,7 +91,7 @@ const Testimonials = () =>
                         <div className="relative">
                             <div className="rounded-2xl overflow-hidden shadow-2xl">
                                 <img
-                                    src="/ielts-graduate.png"
+                                    src="/images/Achieve Your Goals_ IELTS Coaching in Jaipur.jpg"
                                     alt="IELTS Student Success - Graduate with IELTS certificate and UK flag"
                                     className="w-full h-auto object-cover"
                                 />

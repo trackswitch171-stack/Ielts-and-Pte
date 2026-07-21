@@ -130,7 +130,7 @@ const Hero = () =>
                         >
                             <div className="rounded-3xl overflow-hidden shadow-2xl">
                                 <img
-                                    src="/ielts-student.png"
+                                    src="/images/Online IELTS Course for Beginners.jpg"
                                     alt="IELTS Student with global flags - Australia, Canada, UK, France, USA, Germany"
                                     className="w-full h-auto object-cover rounded-3xl"
                                 />
