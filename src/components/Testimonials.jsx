@@ -7,39 +7,48 @@ const Testimonials = () =>
     const testimonials = [
         {
             id: 1,
-            name: 'Sarah Johnson',
-            role: 'Student',
-            location: 'USA',
-            image: '👩‍🎓',
+            name: 'Alex Morgan',
+            role: 'Graduate Student',
+            location: 'Canada',
+            image: '/images/1.jpg',
             rating: 5,
-            text: 'Absolutely amazing service! Got my IELTS certificate in just 48 hours. The process was super easy and everything was confidential. Highly recommended!',
+            text: 'The IELTS support was fast and professional. I got my certificate right on time and the whole process was stress-free.',
         },
         {
             id: 2,
-            name: 'Ahmed Khan',
-            role: 'Professional',
-            location: 'UK',
-            image: '👨‍💼',
+            name: 'Maya Patel',
+            role: 'Student',
+            location: 'USA',
+            image: '/images/6.jpg',
             rating: 5,
-            text: 'This was exactly what I needed for my job application. The team was extremely professional and helpful. Great value for money!',
+            text: 'Their help with PTE prep and certificate verification made all the difference. I felt supported every step of the way.',
         },
         {
             id: 3,
-            name: 'Maria Garcia',
-            role: 'Graduate Student',
-            location: 'Spain',
-            image: '👩‍🎓',
+            name: 'Daniel Brooks',
+            role: 'Professional',
+            location: 'UK',
+            image: '/images/73.jpg',
             rating: 5,
-            text: 'Fast, reliable, and trustworthy. I got both my IELTS and PTE certificates without any issues. This service is a game-changer!',
+            text: 'Perfect service for my visa application. The team was responsive and kept everything confidential from start to finish.',
         },
         {
             id: 4,
-            name: 'James Wilson',
-            role: 'Business Owner',
+            name: 'Ethan Miller',
+            role: 'International Student',
             location: 'Australia',
-            image: '👨‍💼',
+            image: '/images/80.jpg',
             rating: 5,
-            text: 'Outstanding customer support! They answered all my questions and delivered exactly what was promised. Would definitely use again.',
+            text: 'I received my PTE certificate faster than expected and their support team was incredibly helpful. Highly recommend it to anyone overseas.',
+        },
+        {
+            id: 5,
+            name: 'Samuel Okafor',
+            role: 'Aspiring Professional',
+            location: 'Germany',
+            image: '/images/87.jpg',
+            rating: 5,
+            text: 'Everything was handled smoothly, and I got the certificate I needed without any delays. Great value and excellent communication.',
         },
     ]
 
@@ -186,7 +195,17 @@ const Testimonials = () =>
 
                                 {/* Author */}
                                 <div className="flex items-center gap-4">
-                                    <div className="text-4xl">{testimonial.image}</div>
+                                    {testimonial.image?.startsWith('/') ? (
+                                        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-orange-500">
+                                            <img
+                                                src={testimonial.image}
+                                                alt={`${testimonial.name} profile`}
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                    ) : (
+                                        <div className="text-4xl">{testimonial.image}</div>
+                                    )}
                                     <div>
                                         <h4 className="text-white font-semibold">
                                             {testimonial.name}
