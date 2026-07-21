@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -7,11 +8,12 @@ export default function Navbar()
     const [isOpen, setIsOpen] = useState(false);
 
     const navLinks = [
-        { name: 'Services', href: '#services' },
-        { name: 'Why Us', href: '#why-us' },
-        { name: 'How It Works', href: '#how-it-works' },
-        { name: 'FAQ', href: '#faq' },
-        { name: 'Contact', href: '#contact' },
+        { name: 'Home', href: '/' },
+        { name: 'IELTS', href: '/services/ielts' },
+        { name: 'PTE', href: '/services/pte' },
+        { name: 'Upgrade Scores', href: '/upgrade-scores' },
+        { name: 'Buy PTE Q&A', href: '/buy-pte-questions-and-answers' },
+        { name: 'Articles', href: '/articles' },
     ];
 
     const toggleMenu = () => setIsOpen(!isOpen);
@@ -41,15 +43,13 @@ export default function Navbar()
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center gap-8">
                         {navLinks.map((link) => (
-                            <a
+                            <Link
                                 key={link.name}
-                                href={link.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                to={link.href}
                                 className="text-muted hover:text-white transition-colors duration-300 text-sm font-medium"
                             >
                                 {link.name}
-                            </a>
+                            </Link>
                         ))}
                     </div>
 
@@ -88,14 +88,14 @@ export default function Navbar()
                     >
                         <div className="space-y-2">
                             {navLinks.map((link) => (
-                                <a
+                                <Link
                                     key={link.name}
-                                    href={link.href}
+                                    to={link.href}
                                     onClick={() => setIsOpen(false)}
                                     className="block px-4 py-2 rounded-lg text-muted hover:text-white hover:bg-white/10 transition-colors"
                                 >
                                     {link.name}
-                                </a>
+                                </Link>
                             ))}
                             <motion.a
                                 whileHover={{ scale: 1.02 }}

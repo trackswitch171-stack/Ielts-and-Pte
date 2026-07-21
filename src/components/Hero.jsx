@@ -118,7 +118,7 @@ const Hero = () =>
                         </motion.div>
                     </div>
 
-                    {/* Right Side - Certificate Mockup */}
+                    {/* Right Side - IELTS Student Image */}
                     <motion.div
                         variants={itemVariants}
                         className="relative hidden md:block"
@@ -128,37 +128,12 @@ const Hero = () =>
                             transition={{ duration: 4, repeat: Infinity }}
                             className="relative"
                         >
-                            {/* Certificate Card */}
-                            <div className="glass-effect p-8 rounded-lg backdrop-blur-xl border-2 border-orange-500 border-opacity-30">
-                                <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-lg text-center">
-                                    {/* Certificate Design */}
-                                    <div className="border-4 border-amber-900 p-8 bg-amber-50">
-                                        <h3 className="text-2xl font-bold text-amber-900 mb-2">
-                                            Certificate of Achievement
-                                        </h3>
-                                        <div className="h-px bg-amber-900 my-4" />
-                                        <p className="text-amber-700 mb-2 italic">This is to certify that</p>
-                                        <p className="text-xl font-bold text-amber-900 mb-4">
-                                            Student Name
-                                        </p>
-                                        <p className="text-sm text-amber-700 mb-4">
-                                            has successfully completed IELTS/PTE examination
-                                        </p>
-                                        <p className="text-2xl font-bold text-orange-600 mb-4">
-                                            Band Score: 8.5
-                                        </p>
-                                        <div className="flex justify-around pt-4 border-t-2 border-amber-900">
-                                            <div className="text-center">
-                                                <p className="text-xs text-amber-700">Authorized By</p>
-                                                <p className="font-bold text-amber-900">British Council</p>
-                                            </div>
-                                            <div className="text-center">
-                                                <p className="text-xs text-amber-700">Date</p>
-                                                <p className="font-bold text-amber-900">2024</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div className="rounded-3xl overflow-hidden shadow-2xl">
+                                <img
+                                    src="/ielts-student.png"
+                                    alt="IELTS Student with global flags - Australia, Canada, UK, France, USA, Germany"
+                                    className="w-full h-auto object-cover rounded-3xl"
+                                />
                             </div>
 
                             {/* Floating Elements */}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FaWhatsapp, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { FiArrowUp } from 'react-icons/fi'
@@ -9,20 +10,30 @@ const Footer = () =>
 
     const footerLinks = [
         {
-            title: 'Product',
-            links: ['IELTS Certificate', 'PTE Certificate', 'Bundle Package', 'Pricing'],
-        },
-        {
-            title: 'Company',
-            links: ['About Us', 'Blog', 'Careers', 'Press'],
+            title: 'Services',
+            links: [
+                { label: 'IELTS Certificate', href: '/services/ielts' },
+                { label: 'PTE Certificate', href: '/services/pte' },
+                { label: 'Express Bundle', href: '/services/bundle' },
+                { label: 'Buy PTE Q&A', href: '/buy-pte-questions-and-answers' },
+                { label: 'Articles', href: '/articles' },
+            ],
         },
         {
             title: 'Support',
-            links: ['Help Center', 'Contact Us', 'FAQ', 'Status'],
+            links: [
+                { label: 'Upgrade Scores', href: '/upgrade-scores' },
+                { label: 'Contact', href: '/#contact' },
+                { label: 'FAQ', href: '/#faq' },
+            ],
         },
         {
-            title: 'Legal',
-            links: ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'Disclaimer'],
+            title: 'Quick Links',
+            links: [
+                { label: 'Home', href: '/' },
+                { label: 'Why Choose Us', href: '/#why-us' },
+                { label: 'How It Works', href: '/#how-it-works' },
+            ],
         },
     ]
 
@@ -76,12 +87,12 @@ const Footer = () =>
                             <ul className="space-y-2">
                                 {column.links.map((link, linkIdx) => (
                                     <li key={linkIdx}>
-                                        <a
-                                            href="#"
+                                        <Link
+                                            to={link.href}
                                             className="text-muted hover:text-orange-400 transition-colors duration-300 text-sm"
                                         >
-                                            {link}
-                                        </a>
+                                            {link.label}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
